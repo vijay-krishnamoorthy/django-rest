@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+<h1>
+Hi there , this the index page</h1>
+{% block content %}
+<table border="1">
+<caption>Plans in the database</caption>
+<thead>
+<th>name</th>
+<th>Price</th>
+<th>Validity</th>
+<th>Description</th>
+</thead>
+<tbody>
+{% for p in plan %}
+<td>{{ p.name }}</td>
+<td>{{ p.price }}</td>
+<td>{{ p.validity }}</td>
+<td>{{ p.description }}</td>
+</tbody>
+{% endfor %}
+</table>
+{% endblock %}
+<body>
+</html>
